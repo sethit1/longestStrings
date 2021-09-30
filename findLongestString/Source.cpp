@@ -4,13 +4,14 @@
 #include<iostream> 
 
 void getFile(void); // load CSV file
+void ColumnNum(std::fstream&);
 void getColumnNum(std::fstream&); // return number of columns in CSV file
-void longestStr(int); // returns vector holding the length of the longest string for each column
+void longestStr(int, std::fstream&); // returns vector holding the length of the longest string for each column
 int getStrSize(std::fstream&); // get string separated by commas
 void printStrSizes(std::vector<int>, int);
 
 const char COMMA = '|';
-const char NEWLINE = '\r\n';
+const char NEWLINE = '\n';
 
 int main() {
 	getFile();
